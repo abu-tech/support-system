@@ -10,6 +10,8 @@ const protect = asyncHandler( async (req, res, next) => {
             token = req.headers.authorization.split(' ')[1]
             //verify token
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
+
+            //setting req.user
             req.user = await User.findById(decoded.id).select('-password')
             if(!req.user){
                 res.status(400)
