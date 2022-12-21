@@ -32,7 +32,7 @@ const getTicket = asyncHandler( async (req, res) => {
     res.status(200).json(ticket)
 })
 
-//@desc get tickets
+//@desc create tickets
 //@route POST /api/tickets
 //@access private
 const createTicket = asyncHandler( async (req, res) => {
