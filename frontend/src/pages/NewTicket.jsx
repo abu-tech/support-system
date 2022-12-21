@@ -10,7 +10,7 @@ function NewTicket() {
   const [description, setDescription] = useState('')
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
   }
 
   return (
@@ -29,7 +29,22 @@ function NewTicket() {
         <input type="text" className="form-control" value={email} disabled />
       </div>
       <form onSubmit={onSubmit}>
-
+      <div className="form-group">
+        <label htmlFor="product">Select Product</label>
+        <select name="product" id="product" value={product} onChange={e => setProduct(e.target.value)}>
+          <option value="iphone">iphone</option>
+          <option value="macbook pro">macbook pro</option>
+          <option value="ipod">ipod</option>
+          <option value="air pods">air pods</option>
+        </select>
+        <div className="form-group">
+          <label htmlFor="description">Description of the Issue</label>
+          <textarea className="form-control" name="description" id="description" rows="5" cols="30" value={description} onChange={e => setDescription(e.target.value)} placeholder="Description"></textarea>
+        </div>
+      </div>
+      <div className="form-group">
+        <button className="btn btn-block">Submit</button>
+      </div>
       </form>
     </section>
     </>
