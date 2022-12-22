@@ -5,7 +5,7 @@ import {toast} from 'react-toastify'
 import Modal from 'react-modal'
 import {FaPlus} from 'react-icons/fa'
 import {getTicket, reset, closeTicket} from '../features/ticket/ticketSlice'
-import {getNotes, createNote, reset as notesReset} from "../features/note/noteSlice"
+import {getNotes, createNote} from "../features/note/noteSlice"
 import Spinner from "../components/Spinner"
 import BackButton from "../components/BackButton"
 import NoteItem from "../components/NoteItem"
